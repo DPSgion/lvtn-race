@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css');
+
+.tk-wrap {
+  min-height: 100vh;
+  background: #f5faf8;
+  font-family: 'Sora', sans-serif;
+  padding: 1.25rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Banner hoàn thành */
+.tk-complete-banner {
+  background: linear-gradient(135deg, #1D9E75, #0F6E56);
+  color: #fff;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  animation: tk-banner-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes tk-banner-in {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Header */
+.tk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tk-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+.tk-toggle {
+  display: flex;
+  background: #eef4f1;
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+}
+.tk-toggle-btn {
+  border: none;
+  background: none;
+  font-size: 12px;
+  font-family: 'Sora', sans-serif;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #888;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.tk-toggle-btn.active {
+  background: #fff;
+  color: #1D9E75;
+  font-weight: 600;
+  border: 0.5px solid #c5e8d9;
+}
+
+/* Stats */
+.tk-summary {
+  display: flex;
+  gap: 8px;
+}
+.tk-stat {
+  flex: 1;
+  background: #eef4f1;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.tk-stat-num {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+.tk-stat-lbl {
+  font-size: 11px;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* List */
+.tk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 4px;
+}
+
+/* Category card */
+.tk-cat-card {
+  background: #fff;
+  border: 0.5px solid #e0ede8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.tk-cat-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s;
+}
+.tk-cat-head:hover {
+  background: #f5faf8;
+}
+.tk-circle {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+.tk-cat-info {
+  flex: 1;
+}
+.tk-cat-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+}
+.tk-cat-sub {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 1px;
+}
+.tk-del-cat-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 16px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s, background 0.15s;
+}
+.tk-del-cat-btn:hover {
+  color: #E24B4A;
+  background: #FCEBEB;
+}
+.tk-chevron {
+  font-size: 16px;
+  color: #bbb;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.tk-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Body */
+.tk-cat-body {
+  padding: 0 14px 12px;
+  border-top: 0.5px solid #eef4f1;
+}
+.tk-add-row {
+  display: flex;
+  gap: 6px;
+  padding: 10px 0 8px;
+}
+.tk-add-input {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-family: 'Sora', sans-serif;
+  border: 0.5px solid #e0ede8;
+  border-radius: 7px;
+  background: #f5faf8;
+  color: #111;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.tk-add-input:focus {
+  border-color: #1D9E75;
+  box-shadow: 0 0 0 2px rgba(29,158,117,0.1);
+  background: #fff;
+}
+.tk-add-btn {
+  padding: 7px 12px;
+  background: #1D9E75;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.tk-add-btn:hover { background: #0F6E56; }
+
+.tk-cancel-btn {
+  padding: 7px 10px;
+  background: none;
+  color: #aaa;
+  border: 0.5px solid #e0ede8;
+  border-radius: 7px;
+  font-size: 12px;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.tk-cancel-btn:hover { color: #555; }
+
+/* Subtask */
+.tk-subtask-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tk-subtask-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 7px;
+  background: #f5faf8;
+  transition: opacity 0.15s;
+}
+.tk-subtask-row.done .tk-subtask-name {
+  text-decoration: line-through;
+  color: #bbb;
+}
+.tk-drag-handle {
+  color: #ccc;
+  font-size: 14px;
+  cursor: grab;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.tk-drag-handle:active { cursor: grabbing; }
+.tk-cb {
+  width: 15px;
+  height: 15px;
+  accent-color: #1D9E75;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.tk-subtask-name {
+  flex: 1;
+  font-size: 12px;
+  color: #222;
+}
+.tk-del-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+.tk-del-btn:hover { color: #E24B4A; }
+
+.tk-empty {
+  font-size: 12px;
+  color: #ccc;
+  padding: 8px 0;
+  text-align: center;
+}
+
+/* Thêm hạng mục mới */
+.tk-add-cat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 11px;
+  background: none;
+  border: 1px dashed #b5d9ca;
+  border-radius: 12px;
+  color: #1D9E75;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.tk-add-cat-btn:hover { background: #E1F5EE; }
+.tk-add-cat-btn i { font-size: 16px; }
+
+.tk-new-cat-row {
+  display: flex;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+/* Bottom nav */
+.tk-nav {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  border: 0.5px solid #e0ede8;
+  border-radius: 14px;
+  padding: 10px 0;
+  margin-top: auto;
+}
+.tk-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #bbb;
+  font-size: 11px;
+  font-family: 'Sora', sans-serif;
+  padding: 0 20px;
+  transition: color 0.15s;
+}
+.tk-nav-btn i { font-size: 22px; }
+.tk-nav-btn--active { color: #1D9E75; }
+.tk-nav-btn:hover:not(.tk-nav-btn--active):not(.tk-nav-btn--logout) { color: #888; }
+.tk-nav-btn--logout { color: #ccc; }
+.tk-nav-btn--logout:hover { color: #E24B4A; }
