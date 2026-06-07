@@ -35,8 +35,9 @@ function calcProgress(categories) {
 function PlayerCard({ name, folder, totalImages, progress, streak, isMe }) {
   const { pct, done, total } = progress;
   const imgIdx  = getImageIndex(pct, totalImages);
-  const imgSrc  = `/${folder}/${imgIdx + 1}.png`;   // tên file bắt đầu từ 1
-  const imgSrcGif = `/${folder}/${imgIdx + 1}.gif`;
+  const base    = import.meta.env.BASE_URL;
+  const imgSrc  = `${base}${folder}/${imgIdx + 1}.png`;
+  const imgSrcGif = `${base}${folder}/${imgIdx + 1}.gif`;
   const stage   = imgIdx + 1;
 
   function handleImgError(e) {
