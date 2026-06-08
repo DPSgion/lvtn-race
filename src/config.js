@@ -29,7 +29,7 @@ export function getFriendConfig(currentUserKey) {
 
 export const FIXED_CATS = [
   { id: 'idea',    label: 'Ý tưởng' },
-  { id: 'erd',     label: 'Thiết kế ERD' },
+  { id: 'erd',     label: 'Database' },
   { id: 'uc_gen',  label: 'Use case tổng quát' },
   { id: 'uc_det',  label: 'Use case chi tiết' },
   { id: 'seq',     label: 'Sequence diagram' },
